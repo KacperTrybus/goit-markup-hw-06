@@ -4,6 +4,7 @@
   --bg-color: #2f303a;
   --font-color: #212121;
   --form-box-color: rgba(33, 33, 33, 0.2);
+  --nr-color-alpha: rgba(117, 117, 117, 0.5);
   --nr-color: #757575;
   --main-bg-color: #e5e5e5;
   --team-bg-color: #f5f4fa;
@@ -89,6 +90,13 @@ img {
 }
 .contact {
   text-decoration: none;
+  color: var(--nr-color);
+}
+
+.terms-font {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
   color: var(--nr-color);
 }
 
@@ -680,24 +688,28 @@ header svg {
   line-height: 1.16;
   font-weight: 400;
 }
+
 .inputt::placeholder {
-  position: absolute;
-  top: 12px;
-  left: 16px;
+  color: var(--nr-color-alpha);
 }
+
 .inputt:nth-child(8) {
   height: 120px;
   padding-bottom: 84px;
   padding-left: 16px;
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: var(--nr-color);
 }
 .inputt:active {
   border: 1px red solid;
 }
-.inputt:focus-visible {
-  border: 1px red solid;
-}
+
 .terms {
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .submit-button {
   display: flex;
@@ -705,17 +717,18 @@ header svg {
   color: #fff;
   min-width: 200px;
   height: 50px;
-
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-  /* position: relative;
-  transform: translate(50%, 50%); */
 }
 .button-poss {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+}
+.terms-link {
+  color: var(--hover-color);
 }
