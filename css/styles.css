@@ -3,6 +3,7 @@
   --hover-color: #2196f3;
   --bg-color: #2f303a;
   --font-color: #212121;
+  --form-box-color: rgba(33, 33, 33, 0.2);
   --nr-color: #757575;
   --main-bg-color: #e5e5e5;
   --team-bg-color: #f5f4fa;
@@ -326,18 +327,6 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-bt {
-  position: relative;
-  border: 1px solid var(--X-button);
-  background-color: #fff;
-  border-radius: 50%;
-  left: 490px;
-  top: 8px;
-  width: 30px;
-  height: 30px;
-  align-items: center;
-}
-
 /* box */
 
 .section {
@@ -638,4 +627,95 @@ header svg {
 .client-list-border:focus {
   border-color: var(--hover-color);
 }
-/*  animation */
+/*  form */
+
+.form-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-color);
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-top: 40px;
+  padding-bottom: 12px;
+}
+.form-label {
+  font-weight: 400px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--nr-color);
+}
+.form-box {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 40px;
+}
+.modal-close-bt {
+  position: absolute;
+  border: 1px solid var(--X-button);
+  background-color: #fff;
+  border-radius: 50%;
+  left: 490px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+}
+
+.inputt {
+  display: block;
+  border: 1px var(--form-box-color) solid;
+  border-radius: 4px;
+  max-width: 448px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 0px 10px 0px;
+  padding-left: 42px;
+  font-size: 12px;
+  line-height: 1.16;
+  font-weight: 400;
+}
+.inputt::placeholder {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+}
+.inputt:nth-child(8) {
+  height: 120px;
+  padding-bottom: 84px;
+  padding-left: 16px;
+}
+.inputt:active {
+  border: 1px red solid;
+}
+.inputt:focus-visible {
+  border: 1px red solid;
+}
+.terms {
+  margin-top: 20px;
+}
+.submit-button {
+  display: flex;
+  background-color: var(--hover-color);
+  color: #fff;
+  min-width: 200px;
+  height: 50px;
+
+  border: none;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  /* position: relative;
+  transform: translate(50%, 50%); */
+}
+.button-poss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}

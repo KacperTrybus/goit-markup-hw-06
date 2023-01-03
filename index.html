@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zadanie domowe 5</title>
+    <title>Zadanie domowe 6</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -459,10 +459,34 @@
         </address>
       </div>
     </footer>
-
-    <div class="backdrop is-hidden" data-modal>
+    <!-- DODAJ IS HIDDEN JAK SKONCZYSZ -->
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button type="button" class="modal-close-bt" data-modal-close>&times;</button>
+        <form>
+          <button type="button" class="modal-close-bt" data-modal-close>&times;</button>
+
+          <p class="form-head">Zostaw swoje dane w formularzu poniżej</p>
+          <div class="form-box">
+            <label for="name" class="form-label">Imie</label>
+            <input id="name" class="inputt" />
+            <label for="phone-number" class="form-label">Telefon</label>
+            <input id="phone-number" class="inputt" />
+            <label for="mail" class="form-label">Email</label>
+            <input id="mail" class="inputt" />
+            <label for="comment" class="form-label">Komentarz</label>
+            <input id="comment" class="inputt" placeholder="Wprowadź tekst" />
+            <div class="terms">
+              <input type="checkbox" />
+              <label
+                >Oświadczam iż akceptuję <a href="#">Regulamin</a> i
+                <a href="#">Politykę Prywatności.</a></label
+              >
+              <div class="button-poss">
+                <button type="submit" class="submit-button">Wyślij</button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
 
