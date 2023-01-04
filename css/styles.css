@@ -8,7 +8,8 @@
   --nr-color: #757575;
   --main-bg-color: #e5e5e5;
   --team-bg-color: #f5f4fa;
-  --foot-font-color: rgb(255, 255, 255, 0.6);
+  --foot-font-color: rgba(255, 255, 255, 0.6);
+  --newsletter-border: rgba(255, 255, 255, 0.3);
   --border-portfolio: #eeeeee;
   --border-header: #ececec;
   --icon-color: #afb1b8;
@@ -748,10 +749,12 @@ input:focus-visible {
 
 .input-box:focus-within {
   border: 1px solid var(--hover-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-label:focus-within .input-icon {
   fill: var(--hover-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .check-icon {
   position: absolute;
@@ -761,7 +764,8 @@ input:focus-visible {
   background-color: #2196f3;
   border: none;
   border-radius: 2px;
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-box {
@@ -776,5 +780,52 @@ input:focus-visible {
 }
 
 .checkbox-box:checked + .check-icon {
-  visibility: visible;
+  opacity: 1;
+}
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  margin: 72px 0px 0px 78px;
+}
+
+.newsletter-mail-box {
+  width: 358px;
+  height: 50px;
+  background-color: var(--bg-color);
+  border: 1px var(--newsletter-border) solid;
+  border-radius: 4px;
+  color: #fff;
+  padding: 15px 0px 15px 16px;
+}
+.newsletter-mail-box::placeholder {
+  color: var(--foot-font-color);
+}
+.newsletter-form {
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+}
+.newsletter-btn {
+  background-color: var(--hover-color);
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  border: none;
+  border-radius: 4px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.newsletter-btn-font {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  color: #fff;
+  letter-spacing: 0.06em;
+  display: inline;
+}
+.telegram-icon {
+  fill: #fff;
+  position: relative;
+  top: 6px;
+  left: 12px;
 }
