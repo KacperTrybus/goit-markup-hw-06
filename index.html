@@ -459,26 +459,62 @@
         </address>
       </div>
     </footer>
+
     <!-- DODAJ IS HIDDEN JAK SKONCZYSZ -->
-    <div class="backdrop" data-modal>
+
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form>
           <button type="button" class="modal-close-bt" data-modal-close>&times;</button>
 
           <p class="form-head">Zostaw swoje dane w formularzu poniżej</p>
           <div class="form-box">
-            <label for="name" class="form-label">Imie</label>
-            <input id="name" class="inputt" />
-            <label for="phone-number" class="form-label">Telefon</label>
-            <input id="phone-number" class="inputt" />
-            <label for="mail" class="form-label">Email</label>
-            <input id="mail" class="inputt" />
+            <label for="name" class="form-label"
+              >Imie
+              <svg width="18" height="18" class="input-icon name-ic">
+                <use href="./images/icons.svg#icon-name"></use>
+              </svg>
+
+              <input type="text" id="name" name="full-name" class="input-box" />
+            </label>
+
+            <label for="phone" class="form-label"
+              >Telefon
+              <svg width="18" height="18" class="input-icon phone-ic">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+
+              <input type="tel" id="phone" name="phone-number" class="input-box" />
+            </label>
+
+            <label for="email" class="form-label"
+              >Email
+              <svg width="18" height="18" class="input-icon mail-ic">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+
+              <input type="email" id="email" name="user-email" class="input-box" />
+            </label>
             <label for="comment" class="form-label">Komentarz</label>
-            <input id="comment" class="inputt" placeholder="Wprowadź tekst" />
+            <input
+              type="text"
+              id="comment"
+              name="comment"
+              class="input-box input-box-com"
+              placeholder="Wprowadź tekst"
+            />
+
             <div class="terms">
-              <input type="checkbox" />
-              <label class="terms-font"
-                >Oświadczam iż akceptuję <a href="#" class="terms-link">Regulamin</a> i
+              <label for="checkbox" class="terms-font">
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  name="terms-checkbox"
+                  class="checkbox-box"
+                /><svg width="16" height="15" class="check-icon">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+                Oświadczam iż akceptuję <a href="#" class="terms-link">Regulamin</a> i
                 <a href="#" class="terms-link">Politykę Prywatności.</a></label
               >
             </div>

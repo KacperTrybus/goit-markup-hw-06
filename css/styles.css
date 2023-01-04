@@ -674,11 +674,11 @@ header svg {
   align-items: center;
 }
 
-.inputt {
+.input-box {
   display: block;
   border: 1px var(--form-box-color) solid;
   border-radius: 4px;
-  max-width: 448px;
+  width: 448px;
   height: 40px;
   align-items: center;
   justify-content: center;
@@ -689,11 +689,11 @@ header svg {
   font-weight: 400;
 }
 
-.inputt::placeholder {
+.input-box::placeholder {
   color: var(--nr-color-alpha);
 }
 
-.inputt:nth-child(8) {
+.input-box-com {
   height: 120px;
   padding-bottom: 84px;
   padding-left: 16px;
@@ -701,9 +701,6 @@ header svg {
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: var(--nr-color);
-}
-.inputt:active {
-  border: 1px red solid;
 }
 
 .terms {
@@ -731,4 +728,53 @@ header svg {
 }
 .terms-link {
   color: var(--hover-color);
+}
+.input-icon {
+  position: absolute;
+  left: 57px;
+}
+.name-ic {
+  top: 103px;
+}
+.phone-ic {
+  top: 171px;
+}
+.mail-ic {
+  top: 240px;
+}
+input:focus-visible {
+  outline: none;
+}
+
+.input-box:focus-within {
+  border: 1px solid var(--hover-color);
+}
+
+.form-label:focus-within .input-icon {
+  fill: var(--hover-color);
+}
+.check-icon {
+  position: absolute;
+  left: 60px;
+  bottom: 137px;
+  fill: #fff;
+  background-color: #2196f3;
+  border: none;
+  border-radius: 2px;
+  visibility: hidden;
+}
+
+.checkbox-box {
+  appearance: none;
+  border: 1px var(--font-color) solid;
+  width: 16px;
+  height: 15px;
+  position: relative;
+  top: 3px;
+  right: 8px;
+  border-radius: 2px;
+}
+
+.checkbox-box:checked + .check-icon {
+  visibility: visible;
 }
